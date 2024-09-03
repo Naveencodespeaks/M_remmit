@@ -13,7 +13,10 @@ SOMTHING_WRONG = "Something went wrong!"
 PROFILE_ACTIVE =  "Profile is active. You can Login"
 PENDING_PROFILE_COMPLATION = "Profile Complation is Pending"
 INVALIED_CREDENTIALS = "Invalid credential's"
+<<<<<<< HEAD
 EMAIL_NOT_REGISTERED = "Entered email is not registered with us"
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 SUCCESS_LOGIN = "Logged in successfully"
 ACCOUNT_LOCKED ="Account is locked due to invalied attempts"
 COUNTRY_STATES_LIST = "Send this country_id if you wish to receive a certain country's state listings."
@@ -33,6 +36,7 @@ INVALIED_OLD_PASSWORD = "Incorrect Old Password"
 RESEND_EMAIL_VERIFICATION_OTP= "Your Email Verification Otp has been successfully sent"
 PROFILE_UPDATE_SUCCESS="Your profile has been successfully updated"
 NO_PERMISSIONS ="You are not authorised to do this action."
+<<<<<<< HEAD
 KYC_UPDATE_SUCCESS="Your Kyc details are updated successfully"
 BENEFICIARY_CREATE_SUCCESS = "Beneficiary added successfully"
 BENEFICIARY_UPDATED_SUCCESS = "Beneficiary updated successfully"
@@ -43,4 +47,6 @@ RESEND_VERIFICATION_OTP= "OTP has been successfully sent"
 INVALID_SATUS_SELECTED ="Invalid Status Selected"
 BENEFICIARY_IS_SAME_STATUS = "Beneficiary status is same as you selected!"
 TICKET_CREATED ="You've successfully created your Ticket. Administrator will reply to you."
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 

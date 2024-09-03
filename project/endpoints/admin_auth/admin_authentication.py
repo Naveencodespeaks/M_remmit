@@ -34,20 +34,32 @@ async def register(request: AdminRegister, db: Session = Depends(get_database_se
         if not re.fullmatch(email_regex, email):
             return Utility.json_response(status=FAIL, message="Provide valid email", error=[], data={})
         # contact_digits = math.floor(math.log10(contact)) + 1
+<<<<<<< HEAD
         if len(str(contact)) < 7 or len(str(contact)) > 15:
+=======
+        if len(str(contact)) < 7 or len(str(contact)) > 13:
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             return Utility.json_response(status=FAIL, message="Mobile number not valid. Length must be 7-13.",
                                          error=[], data={})
         user_with_email = db.query(AdminUser).filter(AdminUser.email == email).all()
         if len(user_with_email) != 0:
             return Utility.json_response(status=FAIL, message="Email already exists", error=[], data={})
 
+<<<<<<< HEAD
         user_data = AdminUser(role_id =1,status_id=3, email=email,user_name=user_name, mobile_no=contact,password=AuthHandler().get_password_hash(str(password)))
+=======
+        user_data = AdminUser(role_id =1,status_id=1, email=email,user_name=user_name, mobile_no=contact,password=AuthHandler().get_password_hash(str(password)))
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         db.add(user_data)
         db.flush()
         db.commit()
         
         if user_data.id:
+<<<<<<< HEAD
             return Utility.json_response(status=SUCCESS, message="Admin Registered Successfully", error=[],
+=======
+            return Utility.json_response(status=SUCCESS, message="User Registered Successfully", error=[],
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                                          data={"user_id": user_data.id})
         else:
             return Utility.json_response(status=FAIL, message="Something went wrong", error=[], data={})
@@ -58,7 +70,11 @@ async def register(request: AdminRegister, db: Session = Depends(get_database_se
 
 
 @router.post("/login", response_description="Admin authenticated")
+<<<<<<< HEAD
 async def admin_login(request: Login, db: Session = Depends(get_database_session)):
+=======
+def admin_login(request: Login, db: Session = Depends(get_database_session)):
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     try:
         email = request.email
         password = request.password
@@ -107,8 +123,12 @@ async def admin_login(request: Login, db: Session = Depends(get_database_session
         user_data.token = login_token
         del user_data.password
         del user_data.login_token
+<<<<<<< HEAD
         user_dict["token"] = login_token
         return Utility.dict_response(status=SUCCESS, message="Logged in successfully", error=[], data=user_dict)
+=======
+        return Utility.dict_response(status=SUCCESS, message="Logged in successfully", error=[], data=user_data)
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     except Exception as E:
         print(E)
         db.rollback()
@@ -121,6 +141,7 @@ def get_users(auth_user=Depends(AuthHandler().auth_wrapper), db: Session = Depen
     except Exception as E:
         print(E)
         return Utility.json_response(status=FAIL, message="Something went wrong", error=[], data={})
+<<<<<<< HEAD
 
 
 # admin_authentication.py
@@ -197,3 +218,5 @@ class KYC(Base):
 
 Base.metadata.create_all(bind=engine)
 
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d

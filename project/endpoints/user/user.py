@@ -1,10 +1,18 @@
 from datetime import datetime, timezone,timedelta
 from datetime import datetime
+<<<<<<< HEAD
 from ...models.user_model import UserModel,UserDetails,BeneficiaryModel
 from ...models.master_data_models import MdUserRole,MdUserStatus,MdCountries
 
 from . import APIRouter, Utility, SUCCESS, FAIL, EXCEPTION ,INTERNAL_ERROR,BAD_REQUEST,BUSINESS_LOGIG_ERROR, Depends, Session, get_database_session, AuthHandler
 from ...schemas.user_schema import UpdatePassword,UserFilterRequest,PaginatedUserResponse,PaginatedBeneficiaryResponse,BeneficiaryListReq,GetUserDetailsReq,UserListResponse, UpdateUserDetails,UpdateProfile,BeneficiaryRequest,BeneficiaryEdit, GetBeneficiaryDetails, ActivateBeneficiary,UpdateBeneficiaryStatus, ResendBeneficiaryOtp,BeneficiaryResponse
+=======
+from ...models.user_model import UserModel
+from ...models.master_data_models import MdUserRole,MdUserStatus,MdCountries
+
+from . import APIRouter, Utility, SUCCESS, FAIL, EXCEPTION ,INTERNAL_ERROR,BAD_REQUEST,BUSINESS_LOGIG_ERROR, Depends, Session, get_database_session, AuthHandler
+from ...schemas.user_schema import UpdatePassword,UsersList,UserResponse,UpdateProfile
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 import re
 from ...constant import messages as all_messages
 from ...common.mail import Email
@@ -13,12 +21,15 @@ from sqlalchemy.future import select
 from datetime import date, datetime
 from sqlalchemy import Column, Integer, String, Text, Date, DateTime, ForeignKey, func
 from sqlalchemy.ext.asyncio import AsyncSession
+<<<<<<< HEAD
 from ...models.admin_configuration_model import tokensModel
 from sqlalchemy import desc, asc
 from typing import List
 from fastapi import BackgroundTasks
 from fastapi_pagination import Params,paginate 
 from sqlalchemy.orm import  joinedload
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 
 # APIRouter creates path operations for product module
@@ -119,6 +130,7 @@ async def update_password(request: UpdatePassword,auth_user=Depends(AuthHandler(
         db.rollback()
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 
+<<<<<<< HEAD
 '''
 @router.post("/update-details", response_description="Update Profile")
 async def update_details(request: UpdateUserDetails,auth_user=Depends(AuthHandler().auth_wrapper), db: Session = Depends(get_database_session)):
@@ -170,10 +182,13 @@ async def update_details(request: UpdateUserDetails,auth_user=Depends(AuthHandle
         db.rollback()
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 '''
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 def serialize_model(instance):
     """Convert SQLAlchemy ORM model instance to dictionary."""
     return {column.name: getattr(instance, column.name) for column in instance.__table__.columns}
 
+<<<<<<< HEAD
 
 @router.post("/list", response_model=PaginatedUserResponse, response_description="Fetch Users List")
 async def get_users(filter_data: UserFilterRequest,auth_user=Depends(AuthHandler().auth_wrapper),db: Session = Depends(get_database_session)):
@@ -664,5 +679,75 @@ async def send_benficiary_otp(request: ResendBeneficiaryOtp,background_tasks: Ba
     except Exception as E:
         print(E)
         db.rollback()
+=======
+@router.post("/list", response_description="Fetch Users List")
+async def get_users_list(request: UsersList, db: Session = Depends(get_database_session)):
+    try:
+        # Base query
+        query = select(UserModel.id,UserModel.first_name,UserModel.last_name, UserModel.status_id,UserModel.country_id,UserModel.email,MdCountries.name).join(MdCountries, UserModel.country_id == MdCountries.id ,)
+        
+        # Apply filters
+        filters = []
+        if request.search_text:
+            filters.append(UserModel.email.ilike(f"%{request.search_text}%"))
+        
+        # Example filter usage
+        if request.filters:
+            for key, value in request.filters.items():
+                if hasattr(UserModel, key):
+                    column = getattr(UserModel, key)
+                    if isinstance(column.type, Integer):
+                        filters.append(column == int(value))
+                    elif isinstance(column.type, String):
+                        filters.append(column.ilike(f"%{value}%"))
+                    elif isinstance(column.type, Date) and isinstance(value, str):
+                        filters.append(column == datetime.strptime(value, '%Y-%m-%d').date())
+                    elif isinstance(column.type, DateTime) and isinstance(value, str):
+                        filters.append(column == datetime.strptime(value, '%Y-%m-%dT%H:%M:%S'))
+
+        # if filters:
+        #     query = query.where(and_(*filters))
+
+        # Calculate pagination parameters
+        page = request.page
+        per_page = request.per_page
+        offset = (page - 1) * per_page
+
+        # Apply pagination
+        query_with_pagination = query.offset(offset).limit(per_page)
+
+        # Fetch users
+        with db.execute(query_with_pagination) as result:
+            rows = result.fetchall()
+            #users_list = [dict(row._asdict()) for row in rows]
+            users_list = [dict(row._mapping) for row in rows]
+            #users_list = [Utility.model_to_dict(row) for row in rows]
+            #users_list = [serialize_model(row) for row in rows]
+            
+            
+
+            
+
+        # Get total count
+        count_query = select(func.count()).select_from(UserModel).where(and_(*filters)) if filters else select(func.count()).select_from(UserModel)
+        with db.execute(count_query) as result:
+            total_count = result.scalar()
+            print(total_count)
+
+        # Prepare response data
+        res_data = {
+            "list": users_list,
+            "page": page,
+            "per_page": per_page,
+            "total_count": total_count
+        }
+        
+        return Utility.json_response(status=SUCCESS, message=all_messages.UPDATE_PASSWORD_SUCCESS, error=[], data=res_data,code="")
+            
+
+    except Exception as e:
+        print(e)  # For debugging purposes
+        # Ensure to handle rollback correctly
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 

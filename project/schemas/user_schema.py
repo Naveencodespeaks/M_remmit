@@ -2,8 +2,13 @@ from pydantic import BaseModel, EmailStr, Field, ValidationError, validator,fiel
 import phonenumbers
 from phonenumbers import NumberParseException, is_valid_number
 import re
+<<<<<<< HEAD
 from datetime import date, datetime, timedelta
 from typing import Optional, List
+=======
+from datetime import date, datetime
+from typing import Optional
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 
 
@@ -53,7 +58,11 @@ class UpdateProfile(BaseModel):
     
    
 
+<<<<<<< HEAD
 class UpdatePassword(BaseModel):
+=======
+class UpdatePassword(BaseModel):    
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     old_password:str
     password: str
     confirm_password: str = Field(..., description="Test Search")
@@ -78,6 +87,7 @@ class UpdatePassword(BaseModel):
                 raise ValueError('New Password Should not same with Old Password.')
         return v
 
+<<<<<<< HEAD
     class Config:
         #orm_mode = True
         from_attributes = True
@@ -133,12 +143,23 @@ class BeneficiaryListReq(ListRequestBase):
     bank_country_ids:Optional[List[int]] = None
     
     
+=======
+
+class UsersList(BaseModel):
+    page: int = Field(default=1, gt=0, description="Current page number, must be greater than 0")
+    per_page: int = Field(default=10, gt=0, description="Number of users per page, must be greater than 0")
+    search_text:Optional[str] = None
+    filters:Optional[dict] ={}
+    
+
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 class CountryResponse(BaseModel):
     id: int
     name: str
 
     class Config:
+<<<<<<< HEAD
         #orm_mode = True
         from_attributes = True
         str_strip_whitespace = True
@@ -509,3 +530,19 @@ class PaginatedBeneficiaryResponse(BaseModel):
     page: int
     per_page: int
    
+=======
+        orm_mode = True
+        from_attributes=True
+
+class UserResponse(BaseModel):
+    id: int
+    first_name: str
+    last_name: str
+    email: str
+    status_id: int
+    country: CountryResponse  # Use the Pydantic model for related details
+
+    class Config:
+        orm_mode = True
+        from_attributes=True
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d

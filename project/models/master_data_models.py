@@ -10,8 +10,12 @@ class MdUserRole(BaseModel):
     user = relationship('UserModel', back_populates='role_details')
 
     class Config:
+<<<<<<< HEAD
         from_attributes = True
         str_strip_whitespace = True
+=======
+        orm_mode = True
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 class MdUserStatus(BaseModel):
     
@@ -24,6 +28,7 @@ class MdCountries(BaseModel):
     __tablename__ = "md_countries"
     id = Column(Integer, primary_key=True, autoincrement=True)
     shortName = Column(String(100), default='')
+<<<<<<< HEAD
     name = Column(String(100), default='' )
     phoneCode = Column(Integer, default=None)
     order = Column(Integer, default=None)
@@ -39,6 +44,21 @@ class MdCountries(BaseModel):
 
     beneficiary_country = relationship("BeneficiaryModel", back_populates="beneficiary_country_details",  foreign_keys="[BeneficiaryModel.country_id]")
     beneficiary_bank_country = relationship("BeneficiaryModel", back_populates="beneficiary_bank_country_details",foreign_keys="[BeneficiaryModel.bank_country_id]")
+=======
+    name =   Column(String(100),default='' )
+    phoneCode=  Column(Integer,default=None)
+    order = Column(Integer,default=None)
+    currencySymbol =Column(String(100),default='' )
+    currencyCode = Column(String(100),default='' )
+    zipcodeLength = Column(Integer, default=None)
+    allowNumAndCharInZipcode =Column(String(100),default='' )
+    mapName =Column(String(100),default="")
+    allowNumAndCharInZipcode = Column(String(100),default='' )
+
+    user_country = relationship("UserModel", back_populates="country_details")
+
+
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 
 #md_states.json
@@ -96,6 +116,7 @@ class MdKycstatus(BaseModel):
 class MdOccupations(BaseModel):
     __tablename__ = "md_occupations"
     id = Column(Integer, primary_key=True, autoincrement=True)
+<<<<<<< HEAD
     name = Column(String(55) ) 
 
     #user_occuption = relationship("UserDetails", back_populates="occupation_details")   
@@ -114,6 +135,9 @@ class MdOtpConfigarations(BaseModel):
     id = Column(Integer, primary_key=True, autoincrement=True)
     beneficiary = Column(Integer, default=30 )
 
+=======
+    name = Column(String(55) )    
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 
 

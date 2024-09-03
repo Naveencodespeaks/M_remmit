@@ -14,7 +14,11 @@ class AdminUser(BaseModel):
     login_token = Column(Text)
     token = Column(Text)
     email = Column(String(161))
+<<<<<<< HEAD
     mobile_no = Column(String(15))
+=======
+    mobile_no = Column(String(13))
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     last_login = Column(DateTime, default= datetime.utcnow() )
     role_id = Column(Integer, default=1)  # Ensure this matches UserRole.id
     status_id = Column(Integer, default=3)
@@ -22,5 +26,9 @@ class AdminUser(BaseModel):
 
 
     class Config:
+<<<<<<< HEAD
         from_attributes = True
         str_strip_whitespace = True
+=======
+        orm_mode = True
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d

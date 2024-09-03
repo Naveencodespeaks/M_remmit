@@ -51,8 +51,12 @@ typing-extensions = "4.12.2"
 uvicorn = "0.30.5"
 zipp = "3.20.0"
 jsonpickle = "^3.2.2"
+<<<<<<< HEAD
 fastapi = "0.112.1"
 fastapi-pagination = "^0.12.26"
+=======
+fastapi = "^0.112.1"
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 
 [build-system]

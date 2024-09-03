@@ -1,0 +1,67 @@
+[
+	{
+		"id": 1,
+		"name": "Super Admin"
+	},
+	{
+		"id": 2,
+		"name": "Support"
+	},
+	{
+		"id": 3,
+		"name": "Admin"
+	},
+	{
+		"id": 4,
+		"name": "Branch Manager"
+	},
+	{
+		"id": 5,
+		"name": "Front Office User"
+	},
+	{
+		"id": 6,
+		"name": "Attorney"
+	},
+	{
+		"id": 7,
+		"name": "Supervisor"
+	},
+	{
+		"id": 8,
+		"name": "Paralegal"
+	},
+	{
+		"id": 9,
+		"name": "Documentation Manager"
+	},
+	{
+		"id": 10,
+		"name": "Documentation Executive"
+	},
+	{
+		"id": 11,
+		"name": "LCA Manager"
+	},
+	{
+		"id": 12,
+		"name": "Authorized Signatory"
+	},
+	{
+		"id": 13,
+		"name": "Accountant"
+	},
+	{
+		"id": 14,
+		"name": "LCA Executive"
+	},
+	{
+		"id": 50,
+		"name": "Petitioner"
+	},
+	{
+		"id": 51,
+		"name": "Beneficiary" 
+	}
+	
+]

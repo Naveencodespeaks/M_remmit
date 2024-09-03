@@ -8,6 +8,7 @@ from . import APIRouter, Utility, SUCCESS, FAIL, EXCEPTION ,INTERNAL_ERROR,BAD_R
 from ...schemas.register import AdminRegister
 import re
 from ...schemas.master_data import getMasterData
+<<<<<<< HEAD
 from ...models.user_model import TenantModel
 import os
 import json
@@ -16,6 +17,14 @@ from ...models.master_data_models import  MdBeneficiaryStatus,MdOtpConfigaration
 # APIRouter creates path operations for product module
 from ...constant.messages import MASTER_DATA_LIST
 from ...models.admin_user import AdminUser
+=======
+import os
+import json
+from pathlib import Path
+from ...models.master_data_models import  MdCountries,MdLocations,MdReminderStatus,MdStates,MdTaskStatus,MdTenantStatus,MdTimeZone,MdUserRole,MdUserStatus,MdKycstatus,MdOccupations
+# APIRouter creates path operations for product module
+from ...constant.messages import MASTER_DATA_LIST
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 router = APIRouter(
     prefix="/masterdata",
@@ -33,11 +42,15 @@ file_to_model = {
             "md_user_roles.json": MdUserRole,
             "md_user_status.json": MdUserStatus,
             "md_kyc_status.json" :MdKycstatus,
+<<<<<<< HEAD
             "md_occupations.json":MdOccupations,
             "md_otp_configaration.json":MdOtpConfigarations,
             "md_beneficiary_status.json":MdBeneficiaryStatus,
             "md_tanants.json":TenantModel,
             "default_admin.json":AdminUser
+=======
+            "md_occupations":MdOccupations
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         }
 
 
@@ -45,6 +58,7 @@ file_to_model = {
 @router.get("/migrate", response_description="Migrate Master Data")
 def get_users(db: Session = Depends(get_database_session)):
        
+<<<<<<< HEAD
     
         #return {"status": "FAIL", "message": "Data migrated successfully"}
         
@@ -81,6 +95,47 @@ def get_users(db: Session = Depends(get_database_session)):
     return {"status": "SUCCESS", "message": "Data migrated successfully"}
 
     
+=======
+    try:
+        #return {"status": "FAIL", "message": "Data migrated successfully"}
+        
+        json_directory = Path(__file__).resolve().parent.parent.parent / "migrate_data"
+        
+
+        batch_size = 500
+
+        for filename in os.listdir(json_directory):
+            if filename in file_to_model:
+                model = file_to_model[filename]
+                file_path = json_directory / filename
+                
+                with open(file_path, 'r') as file:
+                    data = json.load(file)
+
+                batch = []
+                for entry in data:
+                    # Filter out any keys not matching the model's attributes
+                    filtered_entry = {key: value for key, value in entry.items() if hasattr(model, key)}
+                    
+                    record = model(**filtered_entry)
+                    batch.append(record)
+
+                    if len(batch) >= batch_size:
+                        db.bulk_save_objects(batch)
+                        batch.clear()
+
+                if batch:
+                    db.bulk_save_objects(batch)
+
+                db.commit()
+
+        return {"status": "SUCCESS", "message": "Data migrated successfully"}
+
+    except Exception as e:
+        db.rollback()
+        print(e)
+        return {"status": "FAIL", "message": "Something went wrong"}
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 @router.post("/get-master-data", response_description="Migrate Master Data")
 def get_users(request: getMasterData ,db: Session = Depends(get_database_session)):
@@ -111,7 +166,11 @@ def get_users(request: getMasterData ,db: Session = Depends(get_database_session
                     output[category] =  [Utility.model_to_dict(record) for record in records]
 
         return Utility.json_response(status=SUCCESS, message=MASTER_DATA_LIST, error=[], data=output)
+<<<<<<< HEAD
     except Exception as e:
         print(e)        
+=======
+    except Exception as e:        
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         db.rollback()
         return {"status": INTERNAL_ERROR, "message": "Something went wrong"}

@@ -11,8 +11,11 @@ from ...schemas.login import Login
 from ...constant import messages as all_messages
 from ...common.mail import Email
 import json
+<<<<<<< HEAD
 from fastapi import BackgroundTasks
 
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 # APIRouter creates path operations for product module
 router = APIRouter(
@@ -22,13 +25,21 @@ router = APIRouter(
 )
 
 @router.post("/register", response_description="User User Registration")
+<<<<<<< HEAD
 async def register(request: Register,background_tasks: BackgroundTasks, db: Session = Depends(get_database_session)):
+=======
+async def register(request: Register, db: Session = Depends(get_database_session)):
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     try:
         
         mobile_no = request.mobile_no
         email = request.email
         country_id = request.country_id
         email_regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         if not re.fullmatch(email_regex, email):
             return Utility.json_response(status=BAD_REQUEST, message=all_messages.INVALIED_EMAIL, error=[], data={})
         
@@ -37,7 +48,11 @@ async def register(request: Register,background_tasks: BackgroundTasks, db: Sess
             return Utility.json_response(status=BAD_REQUEST, message=all_messages.INVALIED_MOBILE,error=[], data={})
         user_obj = db.query(UserModel).filter(UserModel.email == email)
         if user_obj.count() <=0:
+<<<<<<< HEAD
             user_data = UserModel(role_id =2,status_id=1, email=email,country_id=country_id, mobile_no=mobile_no,password=str(Utility.uuid()),tenant_id=1)
+=======
+            user_data = UserModel(role_id =2,status_id=1, email=email,country_id=country_id, mobile_no=mobile_no,password=str(Utility.uuid()))
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             #Send Mail to user with active link
             mail_data = {"body":"Welcome to M-Remmitance"}
             db.add(user_data)
@@ -72,18 +87,32 @@ async def register(request: Register,background_tasks: BackgroundTasks, db: Sess
             rowData["country_details"] = Utility.model_to_dict(existing_user.country_details)
             rowData["status_details"] = Utility.model_to_dict(existing_user.status_details)
             
+<<<<<<< HEAD
             #del existing_user.otp
             #del existing_user.password            
+=======
+            del existing_user.otp
+            del existing_user.password            
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             if existing_user.status_id == 1 or existing_user.status_id ==2:
                 msg = all_messages.ACCOUNT_EXISTS_PENDING_EMAIL_VERIFICATION
                 code = "SIGNUP_VERIFICATION_PENDING"                
                 if existing_user.status_id ==2:
+<<<<<<< HEAD
                     otp =str(Utility.generate_otp())
                     mail_data = {}
                     mail_data["name"]= f'''{udata.get("first_name","")} {udata.get("last_name","")}'''
                     mail_data["otp"] = otp
                     background_tasks.add_task(Email.send_mail,recipient_email=[udata["email"]], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
                     user_obj.update({ UserModel.otp:str(otp)}, synchronize_session=False)
+=======
+                    otp =Utility.generate_otp()
+                    mail_data = {}
+                    mail_data["name"]= f'''{udata.get("first_name","")} {udata.get("last_name","")}'''
+                    mail_data["otp"] = otp
+                    Email.send_mail(recipient_email=[udata.email], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
+                    user_obj.update({ UserModel.otp:otp}, synchronize_session=False)
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                     db.flush()
                     db.commit()
                     
@@ -102,13 +131,20 @@ async def register(request: Register,background_tasks: BackgroundTasks, db: Sess
                 return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 
     except Exception as E:
+<<<<<<< HEAD
         
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         print(E)
         db.rollback()
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 
 @router.post("/complete-signup", response_description="Basic Information")
+<<<<<<< HEAD
 async def signup(request: CompleteSignup,background_tasks: BackgroundTasks, db: Session = Depends(get_database_session)):
+=======
+async def signup(request: CompleteSignup, db: Session = Depends(get_database_session)):
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     try:
                
         user_id = request.user_id
@@ -153,6 +189,7 @@ async def signup(request: CompleteSignup,background_tasks: BackgroundTasks, db: 
                 user_obj.otp =otp
                 user_obj.name = f'''{first_name} {last_name}'''
                 db.commit()
+<<<<<<< HEAD
                 db.flush(UserModel)
                 rowData['first_name'] = user_obj.first_name
                 rowData['last_name'] = user_obj.last_name
@@ -163,11 +200,18 @@ async def signup(request: CompleteSignup,background_tasks: BackgroundTasks, db: 
                 rowData["country_details"] = Utility.model_to_dict(user_obj.country_details)
                 rowData["status_details"] = Utility.model_to_dict(user_obj.status_details)
                 background_tasks.add_task(Email.send_mail,recipient_email=[user_obj.email], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
+=======
+                Email.send_mail(recipient_email=[user_obj.email], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                 return Utility.json_response(status=SUCCESS, message=all_messages.REGISTER_SUCCESS, error=[], data=rowData,code="OTP_VERIVICARION_PENDING")
             if user_obj.status_id == 2:
                  mail_data["name"]= f'''{user_obj.first_name} {user_obj.last_name}'''
                  user_obj.otp =otp
+<<<<<<< HEAD
                  background_tasks.add_task(Email.send_mail,recipient_email=[user_obj.email], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
+=======
+                 Email.send_mail(recipient_email=[user_obj.email], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                  db.commit()
                  return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.PENDING_EMAIL_VERIFICATION, error=[], data=rowData,code="OTP_VERIVICARION_PENDING")
             elif  user_obj.status_id == 3:
@@ -187,7 +231,11 @@ async def signup(request: CompleteSignup,background_tasks: BackgroundTasks, db: 
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 
 @router.post("/verify-account", response_description="Send User Signup OTP")
+<<<<<<< HEAD
 async def verify_account(request: VerifyAccount,background_tasks: BackgroundTasks, db: Session = Depends(get_database_session)):
+=======
+async def verify_account(request: VerifyAccount, db: Session = Depends(get_database_session)):
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     try:
                
         user_id = request.user_id
@@ -219,7 +267,11 @@ async def verify_account(request: VerifyAccount,background_tasks: BackgroundTask
                     user_obj.otp = ''
                     db.commit()
                     mail_data ={"name": user_obj.first_name+" "+user_obj.last_name }
+<<<<<<< HEAD
                     background_tasks.add_task(Email.send_mail,recipient_email=[user_obj.email], subject="Welcome to M-Remittance!", template='signup_welcome.html',data=mail_data )
+=======
+                    Email.send_mail(recipient_email=[user_obj.email], subject="Welcome to M-Remittance!", template='signup_welcome.html',data=mail_data )
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                     return Utility.json_response(status=SUCCESS, message=all_messages.OTP_VERIVICARION_SUCCESS, error=[], data=rowData,code="OTP_VERIVICARION_SUCCESS")
            
                 else:
@@ -241,8 +293,14 @@ async def verify_account(request: VerifyAccount,background_tasks: BackgroundTask
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 
 @router.post("/login", response_description="Login")
+<<<<<<< HEAD
 def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends(get_database_session)):
     try:
+=======
+def login(request: Login, db: Session = Depends(get_database_session)):
+    try:
+        
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         email = request.email
         password = request.password
         user_obj = db.query(UserModel,
@@ -254,8 +312,13 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
                         #UserModel.id
                         ).filter(UserModel.email == email)
        
+<<<<<<< HEAD
         if user_obj.count() <= 0:
             return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.EMAIL_NOT_REGISTERED, error=[], data={})
+=======
+        if user_obj.count() != 1:
+            return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.INVALIED_CREDENTIALS, error=[], data={})
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         user_data = user_obj.one()
         
         if user_data.status_id !=3:
@@ -274,6 +337,7 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
             user_dict = Utility.model_to_dict(user_data)
             user_dict["country_details"] =  Utility.model_to_dict(user_data.country_details)
             user_dict["kyc_status"] = Utility.model_to_dict(user_data.kyc_status)
+<<<<<<< HEAD
             if user_data.tenant_details:
                 user_dict["tenant_details"] = Utility.model_to_dict(user_data.tenant_details)
             
@@ -281,12 +345,21 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
             current_time = datetime.utcnow()
             
             
+=======
+            
+            verify_password = AuthHandler().verify_password(str(password), user_data.password)
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             
             if not verify_password:
                 login_fail_count = user_data.login_fail_count
                 if login_fail_count >=3:
+<<<<<<< HEAD
                     time_difference = current_time - user_data.login_attempt_date
                     
+=======
+                    current_time = datetime.utcnow()
+                    time_difference = current_time - user_data.login_attempt_date
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                     if time_difference >= timedelta(hours=24):
                         print("24 Completed")
                         user_obj.update({ UserModel.login_attempt_date:datetime.utcnow(),UserModel.login_fail_count:0}, synchronize_session=False)
@@ -295,6 +368,7 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
                     else:
                         print("24 Not Completed")
                         # Access denied (less than 24 hours since last login)
+<<<<<<< HEAD
                         otp =Utility.generate_otp()
                         token = AuthHandler().encode_token({"otp":otp})
                         user_data.token = token
@@ -309,6 +383,8 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
                         db.commit()
                         background_tasks.add_task(Email.send_mail,recipient_email=[user_data.email], subject="Account Locked & Reset Password link", template='invalid_login_attempts.html',data=rowData )               
                     
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                         user_obj.update({UserModel.login_fail_count:UserModel.login_fail_count+1}, synchronize_session=False)
                         db.flush()
                         db.commit()
@@ -316,6 +392,7 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
                         return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.ACCOUNT_LOCKED, error=[], data={})
                     #Wit for 24 Hourse
                 else:
+<<<<<<< HEAD
                     #print(login_fail_count)
                     user_obj.update({ UserModel.login_attempt_date:datetime.utcnow(),UserModel.login_fail_count:login_fail_count+1}, synchronize_session=False)
                     db.flush(UserModel)
@@ -342,6 +419,17 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
                     user_obj.update({ UserModel.login_fail_count:0,UserModel.last_login:datetime.utcnow() }, synchronize_session=False)
                     db.commit()
                     
+=======
+                    user_obj.update({ UserModel.login_attempt_date:datetime.utcnow(),UserModel.login_fail_count:UserModel.login_fail_count+1}, synchronize_session=False)
+                    db.flush()
+                    db.commit()
+                return Utility.json_response(status=BAD_REQUEST, message=all_messages.INVALIED_CREDENTIALS, error=[], data={})
+            else:
+                login_token = AuthHandler().encode_token(user_dict)
+                if not login_token:
+                    return Utility.json_response(status=FAIL, message=all_messages.SOMTHING_WRONG, error=[], data={})
+                else:
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                     
                     #user_dict = {c.name: getattr(user_data, c.name) for c in user_data.__table__.columns}
                     #print(user_dict)
@@ -349,6 +437,7 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
                         del user_dict["password"]
                     if "token" in user_dict:
                         del user_dict["token"]
+<<<<<<< HEAD
                     if "otp" in user_dict:
                         del user_dict["otp"]
                     if "login_fail_count" in user_dict:
@@ -363,6 +452,15 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
                     return Utility.dict_response(status=SUCCESS, message=all_messages.SUCCESS_LOGIN, error=[], data=user_dict)
 
     except Exception as E:
+=======
+                    user_data.token = login_token
+                    del user_data.password
+                    del user_data.otp
+                    return Utility.dict_response(status=SUCCESS, message=all_messages.SUCCESS_LOGIN, error=[], data=user_data)
+
+    except Exception as E:
+        
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         print(E)
         db.rollback()
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
@@ -370,7 +468,11 @@ def login(request: Login, background_tasks:BackgroundTasks,db: Session = Depends
 
 
 @router.post("/resend-otp", response_description="Re-send Signup OTP")
+<<<<<<< HEAD
 async def resend_otp(request: SignupOtp,background_tasks: BackgroundTasks, db: Session = Depends(get_database_session)):
+=======
+async def resend_otp(request: SignupOtp, db: Session = Depends(get_database_session)):
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     try:
         
         email = request.email
@@ -380,7 +482,12 @@ async def resend_otp(request: SignupOtp,background_tasks: BackgroundTasks, db: S
             return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.USER_NOT_EXISTS, error=[], data={},code="USER_NOT_EXISTS")
         else:
             rowData = {}
+<<<<<<< HEAD
             rowData['user_id'] = user_obj.id
+=======
+            udata = Utility.model_to_dict(user_obj.country_details)
+            rowData['user_id'] = udata["id"]
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             rowData['email'] = user_obj.email
             rowData['first_name'] = user_obj.first_name
             rowData['last_name'] = user_obj.last_name
@@ -395,20 +502,35 @@ async def resend_otp(request: SignupOtp,background_tasks: BackgroundTasks, db: S
                 msg =all_messages.SIGNUP_PROCESS_PENDING                           
                 return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=msg, error=[], data=rowData,code=code)
             
+<<<<<<< HEAD
             elif user_obj.status_id == 4:
                 return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.PROFILE_INACTIVE, error=[], data={})
             elif user_obj.status_id == 5:
                 return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.PROFILE_DELETED, error=[], data={})
             
             elif  user_obj.status_id ==2 or user_obj.status_id ==3:
+=======
+            elif  user_obj.status_id ==2:
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                 otp =Utility.generate_otp()
                 mail_data = {"otp":str(otp),"name":user_obj.first_name +" "+user_obj.last_name}
                 user_obj.token = AuthHandler().encode_token({"otp":otp})
                 user_obj.otp = otp
                 db.commit()
                 #db.flush(user_obj) ## Optionally, refresh the instance from the database to get the updated values
+<<<<<<< HEAD
                 background_tasks.add_task(Email.send_mail,recipient_email=[user_obj.email], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
                 return Utility.json_response(status=SUCCESS, message=all_messages.RESEND_EMAIL_VERIFICATION_OTP, error=[], data=rowData,code="")
+=======
+                Email.send_mail(recipient_email=[user_obj.email], subject=all_messages.PENDING_EMAIL_VERIFICATION_OTP_SUBJ, template='email_verification_otp.html',data=mail_data )
+                return Utility.json_response(status=SUCCESS, message=all_messages.RESEND_EMAIL_VERIFICATION_OTP, error=[], data=rowData,code="")
+            elif  user_obj.status_id == 3:
+                return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.ALREADY_PROFILE_IS_ACTIVE, error=[], data={},code="ALREADY_PROFILE_IS_ACTIVE")
+            elif user_obj.status_id == 4:
+                return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.PROFILE_INACTIVE, error=[], data={})
+            elif user_obj.status_id == 5:
+                return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.PROFILE_DELETED, error=[], data={})
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             else:
                 db.rollback()
                 return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
@@ -418,8 +540,15 @@ async def resend_otp(request: SignupOtp,background_tasks: BackgroundTasks, db: S
         db.rollback()
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 
+<<<<<<< HEAD
 @router.post("/forgot-password", response_description="Forgot Password")
 async def forgot_password(request: ForgotPassword,background_tasks: BackgroundTasks, db: Session = Depends(get_database_session)):
+=======
+
+
+@router.post("/forgot-password", response_description="Forgot Password")
+async def forgot_password(request: ForgotPassword, db: Session = Depends(get_database_session)):
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     try:
         
         email = request.email
@@ -431,7 +560,11 @@ async def forgot_password(request: ForgotPassword,background_tasks: BackgroundTa
         else:
             if user_obj.status_id ==3:
                 if user_obj.date_of_birth != date_of_birth:
+<<<<<<< HEAD
                     return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.INVALID_BIRTHDATE, error=[], data={},code="")
+=======
+                    return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message="Birthdate are incorrect", error=[], data={},code="")
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                 else:
                     rowData = {}
                     udata = Utility.model_to_dict(user_obj.country_details)
@@ -444,18 +577,29 @@ async def forgot_password(request: ForgotPassword,background_tasks: BackgroundTa
                     #rowData['date_of_birth'] = udata.get("date_of_birth",'')
                     rowData['status_id'] = user_obj.status_id            
                     otp =Utility.generate_otp()
+<<<<<<< HEAD
                     token = AuthHandler().encode_token({"otp":otp})
                     user_obj.token = token
+=======
+                    user_obj.token = AuthHandler().encode_token({"otp":otp})
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                     user_obj.otp = otp
                     db.commit()
                     #db.flush(user_obj) ## Optionally, refresh the instance from the database to get the updated values
                     rowData["otp"] = otp
                     rowData["user_id"] = user_obj.id
                     rowData['name'] = f"""{user_obj.first_name} {user_obj.last_name}"""
+<<<<<<< HEAD
                     rowData["reset_link"] = f'''{WEB_URL}ForgotPassword?token={token}&user_id={user_obj.id}'''
 
                     background_tasks.add_task(Email.send_mail,recipient_email=[user_obj.email], subject="Reset Password link", template='forgot_password.html',data=rowData )               
                     return Utility.json_response(status=SUCCESS, message="Reset Password link is sent to your email", error=[], data={"user_id":user_obj.id},code="")
+=======
+                    rowData["reset_link"] = f'''{WEB_URL}reset-password?otp={otp}&user_id={user_obj.id}'''
+
+                    Email.send_mail(recipient_email=[user_obj.email], subject="Your OTP for Password Reset", template='forgot_password.html',data=rowData )               
+                    return Utility.json_response(status=SUCCESS, message="Reset Password OTP is send to your email", error=[], data={},code="")
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                 
             elif  user_obj.status_id == 1:
                 return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.PENDING_PROFILE_COMPLATION, error=[], data={},code="PROFILE_COMPLATION_PENDING")
@@ -475,27 +619,42 @@ async def forgot_password(request: ForgotPassword,background_tasks: BackgroundTa
 
 
 @router.post("/reset-password", response_description="Forgot Password")
+<<<<<<< HEAD
 async def reset_password(request: resetPassword,background_tasks: BackgroundTasks, db: Session = Depends(get_database_session)):
     try:
         user_id = request.user_id
         token = str(request.token)
+=======
+async def reset_password(request: resetPassword, db: Session = Depends(get_database_session)):
+    try:
+        user_id = request.user_id
+        otp = str(request.otp)
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         password =  request.password
         user_obj = db.query(UserModel).filter(UserModel.id == user_id).first()
         if user_obj is None:
             return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.USER_NOT_EXISTS, error=[], data={},code="USER_NOT_EXISTS")
         else:
+<<<<<<< HEAD
             if token !=user_obj.token:
                 return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message="Invalid Token", error=[], data={},code="INVALIED_TOKEN")
+=======
+            if otp !=user_obj.otp:
+                return Utility.json_response(status=BUSINESS_LOGIG_ERROR, message=all_messages.INVALIED_OTP, error=[], data={},code="INVALIED_OTP")
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             if user_obj.status_id ==3:
                 user_obj.token = ''
                 user_obj.otp = ''
                 user_obj.password =AuthHandler().get_password_hash(password)
                 user_obj.login_fail_count = 0
                 db.commit()
+<<<<<<< HEAD
                 rowData = {}                
                 rowData["user_id"] = user_obj.id
                 rowData['name'] = f"""{user_obj.first_name} {user_obj.last_name}"""
                 background_tasks.add_task(Email.send_mail,recipient_email=[user_obj.email], subject=all_messages.RESET_PASSWORD_SUCCESS, template='reset_password_success.html',data=rowData )               
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
                 #db.flush(user_obj) ## Optionally, refresh the instance from the database to get the updated values
                 return Utility.json_response(status=SUCCESS, message=all_messages.RESET_PASSWORD_SUCCESS, error=[], data={"user_id":user_obj.id,"email":user_obj.email},code="")
             elif  user_obj.status_id == 1:
@@ -515,6 +674,7 @@ async def reset_password(request: resetPassword,background_tasks: BackgroundTask
         return Utility.json_response(status=INTERNAL_ERROR, message=all_messages.SOMTHING_WRONG, error=[], data={})
 
 
+<<<<<<< HEAD
 
 from fastapi import FastAPI, HTTPException, Depends, UploadFile, File
 from sqlalchemy.orm import Session
@@ -599,3 +759,5 @@ def kyc_status(kyc_id: int, db: Session = Depends(get_db)):
 
 
 
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d

@@ -101,6 +101,7 @@ class CompleteSignup(BaseModel):
         return v
 
     class Config:
+<<<<<<< HEAD
         pass
         # json_schema_extra = {
         #     "example": {
@@ -115,6 +116,21 @@ class CompleteSignup(BaseModel):
                 
         #     }
         # }
+=======
+        schema_extra = {
+            "example": {
+                "user_id": 1,
+                "first_name": "John",
+                "last_name": "Doe",
+                "country_id": 100,
+                "mobile_no": "+1234567890",
+                "password": "strongpassword",
+                "confirm_password": "strongpassword",
+                "accepted_terms": True,
+                "otp": 123456
+            }
+        }
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 
 
@@ -181,6 +197,7 @@ class resetPassword(BaseModel):
     user_id: int
     password: str
     confirm_password: str
+<<<<<<< HEAD
     #otp: int
     token:str
 
@@ -189,6 +206,15 @@ class resetPassword(BaseModel):
         if v is None:
             raise ValueError('Token is required and cannot be None.')
         return v
+=======
+    otp: int
+
+    # @field_validator('email', mode='before')
+    # def check_email(cls, v,info):
+    #     if v is None:
+    #         raise ValueError('User email address is required and cannot be None.')
+    #     return v
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     
     @field_validator('user_id', mode='before')
     def check_user_id(cls, v, info):
@@ -196,6 +222,7 @@ class resetPassword(BaseModel):
             raise ValueError('User ID is required and cannot be None.')
         return v
 
+<<<<<<< HEAD
     # @field_validator('otp', mode='before')
     # def validate_otp(cls, v, info):
     #     if v is None:
@@ -205,6 +232,17 @@ class resetPassword(BaseModel):
     #     if not (100000 <= v <= 999999):
     #         raise ValueError('OTP must be a 6-digit number.')
     #     return v
+=======
+    @field_validator('otp', mode='before')
+    def validate_otp(cls, v, info):
+        if v is None:
+            raise ValueError('OTP is required and cannot be None.')
+        # Ensure OTP is a 6-digit number (adjust if needed)
+        v = int(v)
+        if not (100000 <= v <= 999999):
+            raise ValueError('OTP must be a 6-digit number.')
+        return v
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     
     @field_validator('password', 'confirm_password', mode='before')
     def passwords_match(cls, v, info):

@@ -9,6 +9,7 @@ from enum import Enum as PyEnum
 class kycStatus(PyEnum):
     PENDING = 0
     COMPLETED = 1
+<<<<<<< HEAD
 
 
 
@@ -63,6 +64,10 @@ class AdminNotificationModel(BaseModel):
         from_attributes = True
         str_strip_whitespace = True
    
+=======
+    
+
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 class UserModel(BaseModel):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -80,10 +85,14 @@ class UserModel(BaseModel):
     login_fail_count =  Column(Integer, default=0,comment='User Login Fail count')
     login_attempt_date = Column(DateTime, default= None,comment='Last Login Attempt date' )
     otp=Column(String(61))
+<<<<<<< HEAD
     #tenant_id = Column(Integer, nullable=True)
     tenant_id = Column(Integer, ForeignKey("tenants.id"), default=None, unique=False, index=True)
     tenant_details = relationship('TenantModel', back_populates='tenant_user')
 
+=======
+    tenant_id = Column(Integer, nullable=True)
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     role_id = Column(Integer, ForeignKey('md_user_roles.id'), nullable=False,default=1)  # Ensure this matches UserRole.id
     role_details = relationship('MdUserRole', back_populates='user')
     status_id = Column(Integer, ForeignKey('md_user_status.id'),  nullable=False,default=1)
@@ -102,6 +111,7 @@ class UserModel(BaseModel):
     kyc_status_id = Column(Integer, ForeignKey("md_kyc_status.id"), nullable=False, default=1 )
     kyc_status = relationship("MdKycstatus", back_populates="user_kyc")
     
+<<<<<<< HEAD
     user_notifications = relationship(
         'NotificationModel', 
         back_populates='user_details',
@@ -112,17 +122,25 @@ class UserModel(BaseModel):
         back_populates='user_details',
         foreign_keys='AdminNotificationModel.user_id'
     )
+=======
+    
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
     accepted_terms = Column(Boolean, default=False)
 
     class Config:
+<<<<<<< HEAD
         from_attributes = True
         str_strip_whitespace = True
+=======
+        orm_mode = True
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 class UserDetails(BaseModel):
     __tablename__ = "user_detais"
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id =  Column(Integer, ForeignKey("users.id"), nullable=False, index=True,unique=True )
+<<<<<<< HEAD
     street = Column(Text)
     city = Column(Text)
     state = Column(Text)
@@ -179,3 +197,8 @@ class BeneficiaryModel(BaseModel):
 
 
 
+=======
+    user = relationship("UserModel", back_populates="user_details")
+
+    
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d

@@ -9,7 +9,10 @@ from fastapi.responses import JSONResponse
 from pydantic import ValidationError
 from typing import List, Dict, Any
 from fastapi.responses import JSONResponse
+<<<<<<< HEAD
 import re
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 # This way all the tables can be created in database but cannot be updated for that use alembic migrations
 # user.Base.metadata.create_all(bind=engine)
@@ -26,7 +29,11 @@ def format_error_details(errors: List[Dict[str, Any]]) -> Dict[str, Any]:
         context = error.get("ctx", {})
         reason =context.get("reason",[])
         formatted_errors[str(loc)] = {
+<<<<<<< HEAD
             "message": re.sub(re.escape("value error, "), '', error["msg"], flags=re.IGNORECASE) ,
+=======
+            "message": error["msg"],
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             "input": error.get("input", ''),
             #"context": context, #error.get("ctx", {})
             "reason":str(reason)
@@ -43,7 +50,11 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
         "errors":formatted_errors,
         "code":"INPUT_VALIDATION_ERROR"
 
+<<<<<<< HEAD
     },status_code=422)
+=======
+    })
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 origins = ["*"]
 

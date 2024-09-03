@@ -7,8 +7,11 @@ import ast
 import json
 import jsonpickle
 #from ..constant.status_constant import FAIL
+<<<<<<< HEAD
 from ..common.utility import Utility
 from ..constant import messages as all_messages 
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 class AuthHandler:
     security = HTTPBearer()
@@ -30,9 +33,15 @@ class AuthHandler:
             return x.isoformat()
         return x #TypeError("Type not serializable")
     
+<<<<<<< HEAD
     def encode_token(self, user_dict,minutes=6000 ):
         payload = {
         'exp': datetime.utcnow() + timedelta(minutes=minutes),
+=======
+    def encode_token(self, user_dict):
+        payload = {
+        'exp': datetime.utcnow() + timedelta(minutes=60),
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         'iat': datetime.utcnow(),
         'sub': jsonpickle.dumps(user_dict)  # Use jsonpickle to handle complex objects
        }
@@ -42,6 +51,7 @@ class AuthHandler:
             algorithm='HS256'
         )
     
+<<<<<<< HEAD
     def decode_otp_token(self, token):
         try:
             payload = jwt.decode(token, self.secret, algorithms=['HS256'])
@@ -57,6 +67,9 @@ class AuthHandler:
             response.update(status=401, message="Invalied otp", error=[], data={},code="INVALIED_OTP")
             raise HTTPException(status_code=401, detail=response)
 
+=======
+    
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
     def decode_token(self, token):
         try:
             payload = jwt.decode(token, self.secret, algorithms=['HS256'])
@@ -69,11 +82,16 @@ class AuthHandler:
         except jwt.InvalidTokenError as e:
             print(e)
             response = {}
+<<<<<<< HEAD
             response.update(status=401, message="Invalid taken", error=[], data={},code="INVALIED_TOKEN")
+=======
+            response.update(status=401, message="Invalied taken", error=[], data={},code="INVALIED_TOKEN")
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
             raise HTTPException(status_code=401, detail=response)
 
     def auth_wrapper(self, auth: HTTPAuthorizationCredentials = Security(security)):
         return self.decode_token(auth.credentials)
+<<<<<<< HEAD
     
     def user_validate(self,user_obj):
         response = {}
@@ -93,3 +111,5 @@ class AuthHandler:
             response.update(status=409, message=all_messages.PROFILE_DELETED, error=[], data={},code="LOGOUT_ACCOUNT")
             raise HTTPException(status_code=409, detail=response)
         return True
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d

@@ -1,9 +1,13 @@
 from fastapi.responses import JSONResponse
 import uuid
 import random
+<<<<<<< HEAD
 from datetime import datetime,date
 from sqlalchemy import desc, asc
 from typing import List, Tuple
+=======
+from datetime import datetime
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
 
 class Utility:
@@ -15,7 +19,11 @@ class Utility:
             'error': error,
             'result': data,
             "code": code if code else''
+<<<<<<< HEAD
         },status_code=status if status else 500)
+=======
+        })
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 
     @staticmethod
     def dict_response(status, message, error, data,code=''):
@@ -24,8 +32,12 @@ class Utility:
             'message': message,
             'error': error,
             'result': data,
+<<<<<<< HEAD
             "code": code if code else'',
             "status_code":status if status else 500
+=======
+            "code": code if code else''
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         })
     @staticmethod
     def generate_otp(n: int=6) -> int:
@@ -47,6 +59,7 @@ class Utility:
     
         result = {}
         for column in model_instance.__table__.columns:
+<<<<<<< HEAD
             value = getattr(model_instance, column.name)
             # if column.name !="created_on" and column.name !="updated_on" and column.name !="date_of_birth" :
             #     
@@ -61,6 +74,14 @@ class Utility:
             
             else:
                 result[column.name] = value
+=======
+            if column.name !="created_on" and column.name !="updated_on" and column.name !="date_of_birth" :
+                value = getattr(model_instance, column.name)
+                if isinstance(value, datetime):
+                    result[column.name] = value.isoformat()  # Convert datetime to ISO 8601 string
+                else:
+                    result[column.name] = value
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
         return result
 
     @staticmethod
@@ -76,6 +97,7 @@ class Utility:
         
         return result
 
+<<<<<<< HEAD
     @staticmethod
     def list_query(Session=None,page=1,par_page=25,sort_by="id",sort_order="asc",response_schema=None,modelRef=None,filters={}):
 
@@ -100,4 +122,6 @@ class Utility:
 
 
 
+=======
+>>>>>>> 4ff072eea4bf3d9e21bdfa50534e18dd866d673d
 #print(Utility.uuid())
