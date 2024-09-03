@@ -1,0 +1,1969 @@
+[{
+	"id": 1,
+	"shortName": "AF",
+	"name": "Afghanistan",
+	"phoneCode": 93,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "AFGHANISTAN"
+}, {
+	"id": 2,
+	"shortName": "AL",
+	"name": "Albania",
+	"phoneCode": 355,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "ALBANIA"
+}, {
+	"id": 3,
+	"shortName": "DZ",
+	"name": "Algeria",
+	"phoneCode": 213,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "ALGERIA"
+}, {
+	"id": 4,
+	"shortName": "AS",
+	"name": "American Samoa",
+	"phoneCode": 1684,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 5,
+	"shortName": "AD",
+	"name": "Andorra",
+	"phoneCode": 376,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "ANDORRA"
+}, {
+	"id": 6,
+	"shortName": "AO",
+	"name": "Angola",
+	"phoneCode": 244,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "ANGOLA"
+}, {
+	"id": 7,
+	"shortName": "AI",
+	"name": "Anguilla",
+	"phoneCode": 1264,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "ANGUILLA"
+}, {
+	"id": 8,
+	"shortName": "AQ",
+	"name": "Antarctica",
+	"phoneCode": 0,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 9,
+	"shortName": "AG",
+	"name": "Antigua And Barbuda",
+	"phoneCode": 1268,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "ANTIGUA AND BARBUDA"
+}, {
+	"id": 10,
+	"shortName": "AR",
+	"name": "Argentina",
+	"phoneCode": 54,
+	"zipcodeLength": 8,
+	"order": 300,
+	"mapName": "ARGENTINA"
+}, {
+	"id": 11,
+	"shortName": "AM",
+	"name": "Armenia",
+	"phoneCode": 374,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "ARMENIA"
+}, {
+	"id": 12,
+	"shortName": "AW",
+	"name": "Aruba",
+	"phoneCode": 297,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 13,
+	"shortName": "AU",
+	"name": "Australia",
+	"phoneCode": 61,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "AUSTRALIA"
+}, {
+	"id": 14,
+	"shortName": "AT",
+	"name": "Austria",
+	"phoneCode": 43,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "AUSTRIA"
+}, {
+	"id": 15,
+	"shortName": "AZ",
+	"name": "Azerbaijan",
+	"phoneCode": 994,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "AZERBAIJAN"
+}, {
+	"id": 16,
+	"shortName": "BS",
+	"name": "Bahamas The",
+	"phoneCode": 1242,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BAHAMAS"
+}, {
+	"id": 17,
+	"shortName": "BH",
+	"name": "Bahrain",
+	"phoneCode": 973,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "BAHRAIN"
+}, {
+	"id": 18,
+	"shortName": "BD",
+	"name": "Bangladesh",
+	"phoneCode": 880,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "BANGLADESH"
+}, {
+	"id": 19,
+	"shortName": "BB",
+	"name": "Barbados",
+	"phoneCode": 1246,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "BARBADOS"
+}, {
+	"id": 20,
+	"shortName": "BY",
+	"name": "Belarus",
+	"phoneCode": 375,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BELARUS"
+}, {
+	"id": 21,
+	"shortName": "BE",
+	"name": "Belgium",
+	"phoneCode": 32,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "BELGIUM"
+}, {
+	"id": 22,
+	"shortName": "BZ",
+	"name": "Belize",
+	"phoneCode": 501,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BELIZE"
+}, {
+	"id": 23,
+	"shortName": "BJ",
+	"name": "Benin",
+	"phoneCode": 229,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BENIN"
+}, {
+	"id": 24,
+	"shortName": "BM",
+	"name": "Bermuda",
+	"phoneCode": 1441,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "BERMUDA"
+}, {
+	"id": 25,
+	"shortName": "BT",
+	"name": "Bhutan",
+	"phoneCode": 975,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": "BHUTAN"
+}, {
+	"id": 26,
+	"shortName": "BO",
+	"name": "Bolivia",
+	"phoneCode": 591,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "BOLIVIA"
+}, {
+	"id": 27,
+	"shortName": "BA",
+	"name": "Bosnia and Herzegovina",
+	"phoneCode": 387,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "BOSNIA AND HERZEGOVINA"
+}, {
+	"id": 28,
+	"shortName": "BW",
+	"name": "Botswana",
+	"phoneCode": 267,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BOTSWANA"
+}, {
+	"id": 29,
+	"shortName": "BV",
+	"name": "Bouvet Island",
+	"phoneCode": 0,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 30,
+	"shortName": "BR",
+	"name": "Brazil",
+	"phoneCode": 55,
+	"zipcodeLength": 8,
+	"order": 300,
+	"mapName": "BRAZIL"
+}, {
+	"id": 31,
+	"shortName": "IO",
+	"name": "British Indian Ocean Territory",
+	"phoneCode": 246,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 32,
+	"shortName": "BN",
+	"name": "Brunei",
+	"phoneCode": 673,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BRUNEI"
+}, {
+	"id": 33,
+	"shortName": "BG",
+	"name": "Bulgaria",
+	"phoneCode": 359,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "BULGARIA"
+}, {
+	"id": 34,
+	"shortName": "BF",
+	"name": "Burkina Faso",
+	"phoneCode": 226,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BURKINA FASO"
+}, {
+	"id": 35,
+	"shortName": "BI",
+	"name": "Burundi",
+	"phoneCode": 257,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "BURUNDI"
+}, {
+	"id": 36,
+	"shortName": "KH",
+	"name": "Cambodia",
+	"phoneCode": 855,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "CAMBODIA"
+}, {
+	"id": 37,
+	"shortName": "CM",
+	"name": "Cameroon",
+	"phoneCode": 237,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "CAMEROON"
+}, {
+	"id": 38,
+	"shortName": "CA",
+	"name": "Canada",
+	"phoneCode": 1,
+	"order": 3,
+	"currencySymbol": "$",
+	"currencyCode": "CAD",
+	"zipcodeLength": 6,
+	"allowNumAndCharInZipcode": true,
+	"mapName": "CANADA"
+}, {
+	"id": 39,
+	"shortName": "CV",
+	"name": "Cape Verde",
+	"phoneCode": 238,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "CAPE VERDE"
+}, {
+	"id": 40,
+	"shortName": "KY",
+	"name": "Cayman Islands",
+	"phoneCode": 1345,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "CAYMAN ISLANDS"
+}, {
+	"id": 41,
+	"shortName": "CF",
+	"name": "Central African Republic",
+	"phoneCode": 236,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "CENTRAL AFRICAN REPUBLIC"
+}, {
+	"id": 42,
+	"shortName": "TD",
+	"name": "Chad",
+	"phoneCode": 235,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "CHAD"
+}, {
+	"id": 43,
+	"shortName": "CL",
+	"name": "Chile",
+	"phoneCode": 56,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "CHILE"
+}, {
+	"id": 44,
+	"shortName": "CN",
+	"name": "China",
+	"phoneCode": 86,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "CHINA"
+}, {
+	"id": 45,
+	"shortName": "CX",
+	"name": "Christmas Island",
+	"phoneCode": 61,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 46,
+	"shortName": "CC",
+	"name": "Cocos (Keeling) Islands",
+	"phoneCode": 672,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 47,
+	"shortName": "CO",
+	"name": "Colombia",
+	"phoneCode": 57,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "COLOMBIA"
+}, {
+	"id": 48,
+	"shortName": "KM",
+	"name": "Comoros",
+	"phoneCode": 269,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "COMOROS"
+}, {
+	"id": 49,
+	"shortName": "CG",
+	"name": "Republic Of The Congo",
+	"phoneCode": 242,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "REPUBLIC OF CONGO"
+}, {
+	"id": 50,
+	"shortName": "CD",
+	"name": "Democratic Republic Of The Congo",
+	"phoneCode": 242,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "DEMOCRATIC REPUBLIC OF THE CONGO"
+}, {
+	"id": 51,
+	"shortName": "CK",
+	"name": "Cook Islands",
+	"phoneCode": 682,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 52,
+	"shortName": "CR",
+	"name": "Costa Rica",
+	"phoneCode": 506,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "COSTA RICA"
+}, {
+	"id": 53,
+	"shortName": "CI",
+	"name": "Cote D''Ivoire (Ivory Coast)",
+	"phoneCode": 225,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 54,
+	"shortName": "HR",
+	"name": "Croatia (Hrvatska)",
+	"phoneCode": 385,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "CROATIA"
+}, {
+	"id": 55,
+	"shortName": "CU",
+	"name": "Cuba",
+	"phoneCode": 53,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "CUBA"
+}, {
+	"id": 56,
+	"shortName": "CY",
+	"name": "Cyprus",
+	"phoneCode": 357,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "CYPRUS"
+}, {
+	"id": 57,
+	"shortName": "CZ",
+	"name": "Czech Republic",
+	"phoneCode": 420,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "CZECH REPUBLIC"
+}, {
+	"id": 58,
+	"shortName": "DK",
+	"name": "Denmark",
+	"phoneCode": 45,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "DENMARK"
+}, {
+	"id": 59,
+	"shortName": "DJ",
+	"name": "Djibouti",
+	"phoneCode": 253,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "DJIBOUTI"
+}, {
+	"id": 60,
+	"shortName": "DM",
+	"name": "Dominica",
+	"phoneCode": 1767,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "DOMINICA"
+}, {
+	"id": 61,
+	"shortName": "DO",
+	"name": "Dominican Republic",
+	"phoneCode": 1809,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "DOMINICAN REPUBLIC"
+}, {
+	"id": 62,
+	"shortName": "TP",
+	"name": "East Timor",
+	"phoneCode": 670,
+	"order": 300,
+	"mapName": "EAST TIMOR"
+}, {
+	"id": 63,
+	"shortName": "EC",
+	"name": "Ecuador",
+	"phoneCode": 593,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "ECUADOR"
+}, {
+	"id": 64,
+	"shortName": "EG",
+	"name": "Egypt",
+	"phoneCode": 20,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "EGYPT"
+}, {
+	"id": 65,
+	"shortName": "SV",
+	"name": "El Salvador",
+	"phoneCode": 503,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "EL SALVADOR"
+}, {
+	"id": 66,
+	"shortName": "GQ",
+	"name": "Equatorial Guinea",
+	"phoneCode": 240,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "EQUATORIAL GUINEA"
+}, {
+	"id": 67,
+	"shortName": "ER",
+	"name": "Eritrea",
+	"phoneCode": 291,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "ERITREA"
+}, {
+	"id": 68,
+	"shortName": "EE",
+	"name": "Estonia",
+	"phoneCode": 372,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "ESTONIA"
+}, {
+	"id": 69,
+	"shortName": "ET",
+	"name": "Ethiopia",
+	"phoneCode": 251,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "ETHIOPIA"
+}, {
+	"id": 70,
+	"shortName": "XA",
+	"name": "External Territories of Australia",
+	"phoneCode": 61,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 71,
+	"shortName": "FK",
+	"name": "Falkland Islands",
+	"phoneCode": 500,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 72,
+	"shortName": "FO",
+	"name": "Faroe Islands",
+	"phoneCode": 298,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 73,
+	"shortName": "FJ",
+	"name": "Fiji Islands",
+	"phoneCode": 679,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "FIJI"
+}, {
+	"id": 74,
+	"shortName": "FI",
+	"name": "Finland",
+	"phoneCode": 358,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "FINLAND"
+}, {
+	"id": 75,
+	"shortName": "FR",
+	"name": "France",
+	"phoneCode": 33,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "FRANCE"
+}, {
+	"id": 76,
+	"shortName": "GF",
+	"name": "French Guiana",
+	"phoneCode": 594,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 77,
+	"shortName": "PF",
+	"name": "French Polynesia",
+	"phoneCode": 689,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 78,
+	"shortName": "TF",
+	"name": "French Southern Territories",
+	"phoneCode": 0,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 79,
+	"shortName": "GA",
+	"name": "Gabon",
+	"phoneCode": 241,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "GABON"
+}, {
+	"id": 80,
+	"shortName": "GM",
+	"name": "Gambia The",
+	"phoneCode": 220,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "GAMBIA"
+}, {
+	"id": 81,
+	"shortName": "GE",
+	"name": "Georgia",
+	"phoneCode": 995,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "GEORGIA"
+}, {
+	"id": 82,
+	"shortName": "DE",
+	"name": "Germany",
+	"phoneCode": 49,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "GERMANY"
+}, {
+	"id": 83,
+	"shortName": "GH",
+	"name": "Ghana",
+	"phoneCode": 233,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "GHANA"
+}, {
+	"id": 84,
+	"shortName": "GI",
+	"name": "Gibraltar",
+	"phoneCode": 350,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "GIBRALTAR"
+}, {
+	"id": 85,
+	"shortName": "GR",
+	"name": "Greece",
+	"phoneCode": 30,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "GREECE"
+}, {
+	"id": 86,
+	"shortName": "GL",
+	"name": "Greenland",
+	"phoneCode": 299,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "GREENLAND"
+}, {
+	"id": 87,
+	"shortName": "GD",
+	"name": "Grenada",
+	"phoneCode": 1473,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "GRENADA"
+}, {
+	"id": 88,
+	"shortName": "GP",
+	"name": "Guadeloupe",
+	"phoneCode": 590,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 89,
+	"shortName": "GU",
+	"name": "Guam",
+	"phoneCode": 1671,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 90,
+	"shortName": "GT",
+	"name": "Guatemala",
+	"phoneCode": 502,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "GUATEMALA"
+}, {
+	"id": 91,
+	"shortName": "XU",
+	"name": "Guernsey and Alderney",
+	"phoneCode": 44,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 92,
+	"shortName": "GN",
+	"name": "Guinea",
+	"phoneCode": 224,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "GUINEA"
+}, {
+	"id": 93,
+	"shortName": "GW",
+	"name": "Guinea-Bissau",
+	"phoneCode": 245,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "GUINEA-BISSAU"
+}, {
+	"id": 94,
+	"shortName": "GY",
+	"name": "Guyana",
+	"phoneCode": 592,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "GUYANA"
+}, {
+	"id": 95,
+	"shortName": "HT",
+	"name": "Haiti",
+	"phoneCode": 509,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "HAITI"
+}, {
+	"id": 96,
+	"shortName": "HM",
+	"name": "Heard and McDonald Islands",
+	"phoneCode": 0,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 97,
+	"shortName": "HN",
+	"name": "Honduras",
+	"phoneCode": 504,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "HONDURAS"
+}, {
+	"id": 98,
+	"shortName": "HK",
+	"name": "Hong Kong S.A.R.",
+	"phoneCode": 852,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "HONG KONG"
+}, {
+	"id": 99,
+	"shortName": "HU",
+	"name": "Hungary",
+	"phoneCode": 36,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "HUNGARY"
+}, {
+	"id": 100,
+	"shortName": "IS",
+	"name": "Iceland",
+	"phoneCode": 354,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": "ICELAND"
+}, {
+	"id": 101,
+	"shortName": "IN",
+	"name": "India",
+	"phoneCode": 91,
+	"order": 2,
+	"currencySymbol": "₹",
+	"currencyCode": "INR",
+	"zipcodeLength": 6,
+	"mapName": "INDIA"
+}, {
+	"id": 102,
+	"shortName": "id",
+	"name": "Indonesia",
+	"phoneCode": 62,
+	"order": 300,
+	"mapName": "INDONESIA"
+}, {
+	"id": 103,
+	"shortName": "IR",
+	"name": "Iran",
+	"phoneCode": 98,
+	"zipcodeLength": 10,
+	"order": 300,
+	"mapName": "IRAN"
+}, {
+	"id": 104,
+	"shortName": "IQ",
+	"name": "Iraq",
+	"phoneCode": 964,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "IRAQ"
+}, {
+	"id": 105,
+	"shortName": "IE",
+	"name": "Ireland",
+	"phoneCode": 353,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": "IRELAND"
+}, {
+	"id": 106,
+	"shortName": "IL",
+	"name": "Israel",
+	"phoneCode": 972,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "ISRAEL"
+}, {
+	"id": 107,
+	"shortName": "IT",
+	"name": "Italy",
+	"phoneCode": 39,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "ITALY"
+}, {
+	"id": 108,
+	"shortName": "JM",
+	"name": "Jamaica",
+	"phoneCode": 1876,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "JAMAICA"
+}, {
+	"id": 109,
+	"shortName": "JP",
+	"name": "Japan",
+	"phoneCode": 81,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "JAPAN"
+}, {
+	"id": 110,
+	"shortName": "XJ",
+	"name": "Jersey",
+	"phoneCode": 44,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 111,
+	"shortName": "JO",
+	"name": "Jordan",
+	"phoneCode": 962,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "JORDAN"
+}, {
+	"id": 112,
+	"shortName": "KZ",
+	"name": "Kazakhstan",
+	"phoneCode": 7,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "KAZAKHSTAN"
+}, {
+	"id": 113,
+	"shortName": "KE",
+	"name": "Kenya",
+	"phoneCode": 254,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "KENYA"
+}, {
+	"id": 114,
+	"shortName": "KI",
+	"name": "Kiribati",
+	"phoneCode": 686,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "KIRIBATI"
+}, {
+	"id": 115,
+	"shortName": "KP",
+	"name": "Korea North",
+	"phoneCode": 850,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "NORTH KOREA"
+}, {
+	"id": 116,
+	"shortName": "KR",
+	"name": "Korea South",
+	"phoneCode": 82,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 117,
+	"shortName": "KW",
+	"name": "Kuwait",
+	"phoneCode": 965,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SOUTH KOREA"
+}, {
+	"id": 118,
+	"shortName": "KG",
+	"name": "Kyrgyzstan",
+	"phoneCode": 996,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "KYRGYZSTAN"
+}, {
+	"id": 119,
+	"shortName": "LA",
+	"name": "Laos",
+	"phoneCode": 856,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "LAOS"
+}, {
+	"id": 120,
+	"shortName": "LV",
+	"name": "Latvia",
+	"phoneCode": 371,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "LATVIA"
+}, {
+	"id": 121,
+	"shortName": "LB",
+	"name": "Lebanon",
+	"phoneCode": 961,
+	"zipcodeLength": 8,
+	"order": 300,
+	"mapName": "LEBANON"
+}, {
+	"id": 122,
+	"shortName": "LS",
+	"name": "Lesotho",
+	"phoneCode": 266,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": "LESOTHO"
+}, {
+	"id": 123,
+	"shortName": "LR",
+	"name": "Liberia",
+	"phoneCode": 231,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "LIBERIA"
+}, {
+	"id": 124,
+	"shortName": "LY",
+	"name": "Libya",
+	"phoneCode": 218,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "LIBYA"
+}, {
+	"id": 125,
+	"shortName": "LI",
+	"name": "Liechtenstein",
+	"phoneCode": 423,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "LIECHTENSTEIN"
+}, {
+	"id": 126,
+	"shortName": "LT",
+	"name": "Lithuania",
+	"phoneCode": 370,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "LITHUANIA"
+}, {
+	"id": 127,
+	"shortName": "LU",
+	"name": "Luxembourg",
+	"phoneCode": 352,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "LUXEMBOURG"
+}, {
+	"id": 128,
+	"shortName": "MO",
+	"name": "Macau S.A.R.",
+	"phoneCode": 853,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 129,
+	"shortName": "MK",
+	"name": "Macedonia",
+	"phoneCode": 389,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "MACEDONIA"
+}, {
+	"id": 130,
+	"shortName": "MG",
+	"name": "Madagascar",
+	"phoneCode": 261,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": "MADAGASCAR"
+}, {
+	"id": 131,
+	"shortName": "MW",
+	"name": "Malawi",
+	"phoneCode": 265,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "MALAWI"
+}, {
+	"id": 132,
+	"shortName": "MY",
+	"name": "Malaysia",
+	"phoneCode": 60,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "MALAYSIA"
+}, {
+	"id": 133,
+	"shortName": "MV",
+	"name": "Maldives",
+	"phoneCode": 960,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "MALDIVES"
+}, {
+	"id": 134,
+	"shortName": "ML",
+	"name": "Mali",
+	"phoneCode": 223,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "MALI"
+}, {
+	"id": 135,
+	"shortName": "MT",
+	"name": "Malta",
+	"phoneCode": 356,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "MALTA"
+}, {
+	"id": 136,
+	"shortName": "XM",
+	"name": "Man (Isle of)",
+	"phoneCode": 44,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 137,
+	"shortName": "MH",
+	"name": "Marshall Islands",
+	"phoneCode": 692,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "MARSHALL ISLANDS"
+}, {
+	"id": 138,
+	"shortName": "MQ",
+	"name": "Martinique",
+	"phoneCode": 596,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 139,
+	"shortName": "MR",
+	"name": "Mauritania",
+	"phoneCode": 222,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "MAURITANIA"
+}, {
+	"id": 140,
+	"shortName": "MU",
+	"name": "Mauritius",
+	"phoneCode": 230,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "MAURITIUS"
+}, {
+	"id": 141,
+	"shortName": "YT",
+	"name": "Mayotte",
+	"phoneCode": 269,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 142,
+	"shortName": "MX",
+	"name": "Mexico",
+	"phoneCode": 52,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "MEXICO"
+}, {
+	"id": 143,
+	"shortName": "FM",
+	"name": "Micronesia",
+	"phoneCode": 691,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 144,
+	"shortName": "MD",
+	"name": "Moldova",
+	"phoneCode": 373,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "MOLDOVA"
+}, {
+	"id": 145,
+	"shortName": "MC",
+	"name": "Monaco",
+	"phoneCode": 377,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "MONACO"
+}, {
+	"id": 146,
+	"shortName": "MN",
+	"name": "Mongolia",
+	"phoneCode": 976,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "MONGOLIA"
+}, {
+	"id": 147,
+	"shortName": "MS",
+	"name": "Montserrat",
+	"phoneCode": 1664,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 148,
+	"shortName": "MA",
+	"name": "Morocco",
+	"phoneCode": 212,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "MOROCCO"
+}, {
+	"id": 149,
+	"shortName": "MZ",
+	"name": "Mozambique",
+	"phoneCode": 258,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "MOZAMBIQUE"
+}, {
+	"id": 150,
+	"shortName": "MM",
+	"name": "Myanmar",
+	"phoneCode": 95,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 151,
+	"shortName": "NA",
+	"name": "Namibia",
+	"phoneCode": 264,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "NAMIBIA"
+}, {
+	"id": 152,
+	"shortName": "NR",
+	"name": "Nauru",
+	"phoneCode": 674,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "NAURU"
+}, {
+	"id": 153,
+	"shortName": "NP",
+	"name": "Nepal",
+	"phoneCode": 977,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "NEPAL"
+}, {
+	"id": 154,
+	"shortName": "AN",
+	"name": "Netherlands Antilles",
+	"phoneCode": 599,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 155,
+	"shortName": "NL",
+	"name": "Netherlands The",
+	"phoneCode": 31,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "NETHERLANDS"
+}, {
+	"id": 156,
+	"shortName": "NC",
+	"name": "New Caledonia",
+	"phoneCode": 687,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 157,
+	"shortName": "NZ",
+	"name": "New Zealand",
+	"phoneCode": 64,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "NEW ZEALAND"
+}, {
+	"id": 158,
+	"shortName": "NI",
+	"name": "Nicaragua",
+	"phoneCode": 505,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "NICARAGUA"
+}, {
+	"id": 159,
+	"shortName": "NE",
+	"name": "Niger",
+	"phoneCode": 227,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "NIGER"
+}, {
+	"id": 160,
+	"shortName": "NG",
+	"name": "Nigeria",
+	"phoneCode": 234,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "NIGERIA"
+}, {
+	"id": 161,
+	"shortName": "NU",
+	"name": "Niue",
+	"phoneCode": 683,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 162,
+	"shortName": "NF",
+	"name": "Norfolk Island",
+	"phoneCode": 672,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 163,
+	"shortName": "MP",
+	"name": "Northern Mariana Islands",
+	"phoneCode": 1670,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 164,
+	"shortName": "NO",
+	"name": "Norway",
+	"phoneCode": 47,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "NORWAY"
+}, {
+	"id": 165,
+	"shortName": "OM",
+	"name": "Oman",
+	"phoneCode": 968,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": "OMAN"
+}, {
+	"id": 166,
+	"shortName": "PK",
+	"name": "Pakistan",
+	"phoneCode": 92,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "PAKISTAN"
+}, {
+	"id": 167,
+	"shortName": "PW",
+	"name": "Palau",
+	"phoneCode": 680,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "PALAU"
+}, {
+	"id": 168,
+	"shortName": "PS",
+	"name": "Palestinian Territory Occupied",
+	"phoneCode": 970,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 169,
+	"shortName": "PA",
+	"name": "Panama",
+	"phoneCode": 507,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "PANAMA"
+}, {
+	"id": 170,
+	"shortName": "PG",
+	"name": "Papua new Guinea",
+	"phoneCode": 675,
+	"zipcodeLength": 3,
+	"order": 300,
+	"mapName": "PAPUA NEW GUINEA"
+}, {
+	"id": 171,
+	"shortName": "PY",
+	"name": "Paraguay",
+	"phoneCode": 595,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "PARAGUAY"
+}, {
+	"id": 172,
+	"shortName": "PE",
+	"name": "Peru",
+	"phoneCode": 51,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "PERU"
+}, {
+	"id": 173,
+	"shortName": "PH",
+	"name": "Philippines",
+	"phoneCode": 63,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "PHILIPPINES"
+}, {
+	"id": 174,
+	"shortName": "PN",
+	"name": "Pitcairn Island",
+	"phoneCode": 0,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 175,
+	"shortName": "PL",
+	"name": "Poland",
+	"phoneCode": 48,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "POLAND"
+}, {
+	"id": 176,
+	"shortName": "PT",
+	"name": "Portugal",
+	"phoneCode": 351,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": "PORTUGAL"
+}, {
+	"id": 177,
+	"shortName": "PR",
+	"name": "Puerto Rico",
+	"phoneCode": 1787,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 178,
+	"shortName": "QA",
+	"name": "Qatar",
+	"phoneCode": 974,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "QATAR"
+}, {
+	"id": 179,
+	"shortName": "RE",
+	"name": "Reunion",
+	"phoneCode": 262,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 180,
+	"shortName": "RO",
+	"name": "Romania",
+	"phoneCode": 40,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "ROMANIA"
+}, {
+	"id": 181,
+	"shortName": "RU",
+	"name": "Russia",
+	"phoneCode": 70,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "RUSSIA"
+}, {
+	"id": 182,
+	"shortName": "RW",
+	"name": "Rwanda",
+	"phoneCode": 250,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "RWANDA"
+}, {
+	"id": 183,
+	"shortName": "SH",
+	"name": "Saint Helena",
+	"phoneCode": 290,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 184,
+	"shortName": "KN",
+	"name": "Saint Kitts And Nevis",
+	"phoneCode": 1869,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SAINT KITTS AND NEVIS"
+}, {
+	"id": 185,
+	"shortName": "LC",
+	"name": "Saint Lucia",
+	"phoneCode": 1758,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SAINT LUCIA"
+}, {
+	"id": 186,
+	"shortName": "PM",
+	"name": "Saint Pierre and Miquelon",
+	"phoneCode": 508,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 187,
+	"shortName": "VC",
+	"name": "Saint Vincent And The Grenadines",
+	"phoneCode": 1784,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SAINT VINCENT AND THE GRENADINES"
+}, {
+	"id": 188,
+	"shortName": "WS",
+	"name": "Samoa",
+	"phoneCode": 684,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SAMOA"
+}, {
+	"id": 189,
+	"shortName": "SM",
+	"name": "San Marino",
+	"phoneCode": 378,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SAN MARINO"
+}, {
+	"id": 190,
+	"shortName": "ST",
+	"name": "Sao Tome and Principe",
+	"phoneCode": 239,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SAO TOME AND PRINCIPE"
+}, {
+	"id": 191,
+	"shortName": "SA",
+	"name": "Saudi Arabia",
+	"phoneCode": 966,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SAUDI ARABIA"
+}, {
+	"id": 192,
+	"shortName": "SN",
+	"name": "Senegal",
+	"phoneCode": 221,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SENEGAL"
+}, {
+	"id": 193,
+	"shortName": "RS",
+	"name": "Serbia",
+	"phoneCode": 381,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SERBIA"
+}, {
+	"id": 194,
+	"shortName": "SC",
+	"name": "Seychelles",
+	"phoneCode": 248,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SEYCHELLES"
+}, {
+	"id": 195,
+	"shortName": "SL",
+	"name": "Sierra Leone",
+	"phoneCode": 232,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SIERRA LEONE"
+}, {
+	"id": 196,
+	"shortName": "SG",
+	"name": "Singapore",
+	"phoneCode": 65,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SINGAPORE"
+}, {
+	"id": 197,
+	"shortName": "SK",
+	"name": "Slovakia",
+	"phoneCode": 421,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SLOVAKIA"
+}, {
+	"id": 198,
+	"shortName": "SI",
+	"name": "Slovenia",
+	"phoneCode": 386,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "SLOVENIA"
+}, {
+	"id": 199,
+	"shortName": "XG",
+	"name": "Smaller Territories of the UK",
+	"phoneCode": 44,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 200,
+	"shortName": "SB",
+	"name": "Solomon Islands",
+	"phoneCode": 677,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SOLOMON ISLANDS"
+}, {
+	"id": 201,
+	"shortName": "SO",
+	"name": "Somalia",
+	"phoneCode": 252,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SOMALIA"
+}, {
+	"id": 202,
+	"shortName": "ZA",
+	"name": "South Africa",
+	"phoneCode": 27,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "SOUTH AFRICA"
+}, {
+	"id": 203,
+	"shortName": "GS",
+	"name": "South Georgia",
+	"phoneCode": 0,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 204,
+	"shortName": "SS",
+	"name": "South Sudan",
+	"phoneCode": 211,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 205,
+	"shortName": "ES",
+	"name": "Spain",
+	"phoneCode": 34,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SPAIN"
+}, {
+	"id": 206,
+	"shortName": "LK",
+	"name": "Sri Lanka",
+	"phoneCode": 94,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SRI LANKA"
+}, {
+	"id": 207,
+	"shortName": "SD",
+	"name": "Sudan",
+	"phoneCode": 249,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SUDAN"
+}, {
+	"id": 208,
+	"shortName": "SR",
+	"name": "Suriname",
+	"phoneCode": 597,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SURINAME"
+}, {
+	"id": 209,
+	"shortName": "SJ",
+	"name": "Svalbard And Jan Mayen Islands",
+	"phoneCode": 47,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 210,
+	"shortName": "SZ",
+	"name": "Swaziland",
+	"phoneCode": 268,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "SWAZILAND"
+}, {
+	"id": 211,
+	"shortName": "SE",
+	"name": "Sweden",
+	"phoneCode": 46,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "SWEDEN"
+}, {
+	"id": 212,
+	"shortName": "CH",
+	"name": "Switzerland",
+	"phoneCode": 41,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "SWITZERLAND"
+}, {
+	"id": 213,
+	"shortName": "SY",
+	"name": "Syria",
+	"phoneCode": 963,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "SYRIA"
+}, {
+	"id": 214,
+	"shortName": "TW",
+	"name": "Taiwan",
+	"phoneCode": 886,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "TAIWAN"
+}, {
+	"id": 215,
+	"shortName": "TJ",
+	"name": "Tajikistan",
+	"phoneCode": 992,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "TAJIKISTAN"
+}, {
+	"id": 216,
+	"shortName": "TZ",
+	"name": "Tanzania",
+	"phoneCode": 255,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "TANZANIA"
+}, {
+	"id": 217,
+	"shortName": "TH",
+	"name": "Thailand",
+	"phoneCode": 66,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "THAILAND"
+}, {
+	"id": 218,
+	"shortName": "TG",
+	"name": "Togo",
+	"phoneCode": 228,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "TOGO"
+}, {
+	"id": 219,
+	"shortName": "TK",
+	"name": "Tokelau",
+	"phoneCode": 690,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 220,
+	"shortName": "TO",
+	"name": "Tonga",
+	"phoneCode": 676,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "TONGA"
+}, {
+	"id": 221,
+	"shortName": "TT",
+	"name": "Trin_idad And Tobago",
+	"phoneCode": 1868,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "TRINIDAD AND TOBAGO"
+}, {
+	"id": 222,
+	"shortName": "TN",
+	"name": "Tunisia",
+	"phoneCode": 216,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "TUNISIA"
+}, {
+	"id": 223,
+	"shortName": "TR",
+	"name": "Turkey",
+	"phoneCode": 90,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "TURKEY"
+}, {
+	"id": 224,
+	"shortName": "TM",
+	"name": "Turkmenistan",
+	"phoneCode": 7370,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "TURKMENISTAN"
+}, {
+	"id": 225,
+	"shortName": "TC",
+	"name": "Turks And Caicos Islands",
+	"phoneCode": 1649,
+	"zipcodeLength": 7,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 226,
+	"shortName": "TV",
+	"name": "Tuvalu",
+	"phoneCode": 688,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "TUVALU"
+}, {
+	"id": 227,
+	"shortName": "UG",
+	"name": "Uganda",
+	"phoneCode": 256,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "UGANDA"
+}, {
+	"id": 228,
+	"shortName": "UA",
+	"name": "Ukraine",
+	"phoneCode": 380,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "UKRAINE"
+}, {
+	"id": 229,
+	"shortName": "AE",
+	"name": "United Arab Emirates",
+	"phoneCode": 971,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "UNITED ARAB EMIRATES"
+}, {
+	"id": 230,
+	"shortName": "GB",
+	"name": "United Kingdom",
+	"phoneCode": 44,
+	"minZipcodeLength": 5,
+	"zipcodeLength": 7,
+	"allowNumAndCharInZipcode": true,
+	"order": 300,
+	"mapName": "UNITED KINGDOM"
+}, {
+	"id": 231,
+	"shortName": "US",
+	"name": "United States",
+	"phoneCode": 1,
+	"order": 1,
+	"currencySymbol": "$",
+	"currencyCode": "USD",
+	"zipcodeLength": 5,
+	"mapName": "UNITED STATES OF AMERICA"
+}, {
+	"id": 232,
+	"shortName": "UM",
+	"name": "United States Minor Outlying Islands",
+	"phoneCode": 1,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 233,
+	"shortName": "UY",
+	"name": "Uruguay",
+	"phoneCode": 598,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "URUGUAY"
+}, {
+	"id": 234,
+	"shortName": "UZ",
+	"name": "Uzbekistan",
+	"phoneCode": 998,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "UZBEKISTAN"
+}, {
+	"id": 235,
+	"shortName": "VU",
+	"name": "Vanuatu",
+	"phoneCode": 678,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "VANUATU"
+}, {
+	"id": 236,
+	"shortName": "VA",
+	"name": "Vatican City State (Holy See)",
+	"phoneCode": 39,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "VATICAN CITY"
+}, {
+	"id": 237,
+	"shortName": "VE",
+	"name": "Venezuela",
+	"phoneCode": 58,
+	"zipcodeLength": 4,
+	"order": 300,
+	"mapName": "VENEZUELA"
+}, {
+	"id": 238,
+	"shortName": "VN",
+	"name": "Vietnam",
+	"phoneCode": 84,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "VIETNAM"
+}, {
+	"id": 239,
+	"shortName": "VG",
+	"name": "Virgin Islands (British)",
+	"phoneCode": 1284,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 240,
+	"shortName": "VI",
+	"name": "Virgin Islands (US)",
+	"phoneCode": 1340,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 241,
+	"shortName": "WF",
+	"name": "Wallis And Futuna Islands",
+	"phoneCode": 681,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 242,
+	"shortName": "EH",
+	"name": "Western Sahara",
+	"phoneCode": 212,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 243,
+	"shortName": "YE",
+	"name": "Yemen",
+	"phoneCode": 967,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "YEMEN"
+}, {
+	"id": 244,
+	"shortName": "YU",
+	"name": "Yugoslavia",
+	"phoneCode": 38,
+	"order": 300,
+	"mapName": ""
+}, {
+	"id": 245,
+	"shortName": "ZM",
+	"name": "Zambia",
+	"phoneCode": 260,
+	"zipcodeLength": 5,
+	"order": 300,
+	"mapName": "ZAMBIA"
+}, {
+	"id": 246,
+	"shortName": "ZW",
+	"name": "Zimbabwe",
+	"phoneCode": 26,
+	"zipcodeLength": 6,
+	"order": 300,
+	"mapName": "ZIMBABWE"
+}]
